@@ -132,26 +132,26 @@ body{
 /* profile pics */
 .element1 .profile{
     border: 1px #9c70e7 solid;
-    background-image: url(testimonials-grid-section-main/images/image-daniel.jpg);
+    background-image: url(image-daniel.jpg);
 }
 .element2 .profile{
     border: 1px #eaf0f7 solid;
-    background-image: url(testimonials-grid-section-main/images/image-jonathan.jpg);
+    background-image: url(image-jonathan.jpg);
 }
 
 .element3 .profile{
     border: 1px #eaf0f7 solid;
-    background-image: url(testimonials-grid-section-main/images/image-kira.jpg);
+    background-image: url(image-kira.jpg);
 
 }
 .element4 .profile{
     border: 1px #eaf0f7 solid;
-    background-image: url(testimonials-grid-section-main/images/image-jeanette.jpg);
+    background-image: url(image-jeanette.jpg);
 
 }
 .element5 .profile{
     border: 1px #eaf0f7 solid;
-    background-image: url(testimonials-grid-section-main/images/image-patrick.jpg);
+    background-image: url(image-patrick.jpg);
 
 }
 
