@@ -1,0 +1,214 @@
+:root{
+    --ms:35px;
+    --lm:100%;
+}
+
+.container{
+    height: 455px;
+    display: grid;
+    row-gap: 4%;
+    column-gap:3%;
+    grid-template-columns: repeat(4,calc(100%/4 - 2%));
+    grid-template-rows: repeat(2,calc(100%/ 2 - 2%));
+    width: 1000px;
+    margin: auto;
+    margin-top: 20px;
+    grid-template-areas: "element1 element1 element2 element3"
+    "element4 element5 element5 element3";
+}
+
+body{
+    background-color: #d2d3d9;
+}
+.text{
+    font-weight: bold;
+}
+.container div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-radius: 5%;
+    color: white;
+}
+.element1{
+    grid-area: element1;
+    background-color: #733fc8;
+}
+.element2{
+    grid-area: element2;
+    background-color: #49556b;
+}
+.element3{
+    grid-area: element3;
+    background-color: white;
+    color: black !important;
+}
+.element4{
+    grid-area: element4;
+    background-color: white;
+    color: black !important;
+    
+}
+.element5{
+    grid-area: element5;
+    background-color: #191f2d;
+}
+
+.text{
+    width: 85%;
+    margin-left: 7.5%;
+    font-size: small;
+}
+.text::after{
+    margin-top: 20px;
+    font-size: smaller;
+    content: "";
+}
+
+.element3 div{
+    color: black !important;
+}
+.element4 div{
+    color: black !important;
+}
+.container [class*=element] div{
+    margin-top: 4%;
+}
+.profile{
+    flex-direction: row !important;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+    width: var(--ms);
+    height: var(--ms);
+    border-radius: 50% !important;
+    background-size: cover;
+}
+
+.profile::after{
+    content: "verfied graduate";
+    white-space: nowrap;
+    position: relative;
+    font-size: small;
+    left: calc(var(--ms) + 50%);
+}
+
+.profile::before{
+    white-space: nowrap;
+}
+
+
+/* name preset */
+.element1 .profile::before{
+    content: "Daniel clifford";
+    position: relative;
+    left: calc(var(--ms) + 50%);
+
+}
+.element2 .profile::before{
+    content: "Jonathan walters";
+    width: var(--lm);
+    position: relative;
+    left: calc(var(--ms) + 50%);
+
+}
+.element3 .profile::before{
+    content: "Kira whittle";
+    width: var(--lm);
+    position: relative;
+    left: calc(var(--ms) + 50%);
+}
+.element4 .profile::before{
+    content: "Jeanette Harmon";
+    width: var(--lm);
+    position: relative;
+    left: calc(var(--ms) + 50%);
+}
+.element5 .profile::before{
+    content: "Patrick Abrams";
+    width: var(--lm);
+    position: relative;
+    left: calc(var(--ms) + 50%);
+}
+/* profile pics */
+.element1 .profile{
+    border: 1px #9c70e7 solid;
+    background-image: url(testimonials-grid-section-main/images/image-daniel.jpg);
+}
+.element2 .profile{
+    border: 1px #eaf0f7 solid;
+    background-image: url(testimonials-grid-section-main/images/image-jonathan.jpg);
+}
+
+.element3 .profile{
+    border: 1px #eaf0f7 solid;
+    background-image: url(testimonials-grid-section-main/images/image-kira.jpg);
+
+}
+.element4 .profile{
+    border: 1px #eaf0f7 solid;
+    background-image: url(testimonials-grid-section-main/images/image-jeanette.jpg);
+
+}
+.element5 .profile{
+    border: 1px #eaf0f7 solid;
+    background-image: url(testimonials-grid-section-main/images/image-patrick.jpg);
+
+}
+
+/* text */
+
+.element1 .text::after{
+    content: "“ I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a transition and have heard some people who had an amazing experience here. I signed up for the free intro course and found it incredibly fun! I enrolled shortly thereafter. The next 12 weeks was the best - and most grueling - time of my life. Since completing the course, I’ve successfully switched careers, working as a Software Engineer at a VR startup. ”";
+}
+
+.element2 .text::after{
+    content: "“ I started as a total newbie with virtually no coding skills. I now work as a mobile engineer for a big company. This was one of the best investments I’ve made in myself. ”";
+}
+
+.element3 .text::after{
+    content: "“ Before joining the bootcamp, I’ve never written a line of code. I needed some structure from professionals who can help me learn programming step by step. I was encouraged to enroll by a former student of theirs who can only say wonderful things about the program. The entire curriculum and staff did not disappoint. They were very hands-on and I never had to wait long for assistance. The agile team project, in particular, was outstanding. It took my learning to the next level in a way that no tutorial could ever have. In fact, I’ve often referred to it during interviews as an example of my developent experience. It certainly helped me land a job as a full-stack developer after receiving multiple offers. 100% recommend! ”";
+}
+.element4 .text::after{
+    content: "“ Thank you for the wonderful experience! I now have a job I really enjoy, and make a good living while doing something I love. ”";
+}
+.element5 .text::after{
+    content: "“ The staff seem genuinely concerned about my progress which I find really refreshing. The program gave me the confidence necessary to be able to go out in the world and present myself as a capable junior developer. The standard is above the rest. You will get the personal attention you need from an incredible community of smart and amazing people. ”";
+}
+
+/* responsive designs */
+
+/* mobile */
+
+@media (max-width:915px) and (max-height:570px){
+      .container{
+        font-size: 9px;
+        height: 1000px;
+        display: grid;
+        row-gap: 1%;
+        column-gap:3%;
+        grid-template-columns: repeat(1,auto);
+        grid-template-rows: repeat(8,calc(100%/ 8 - 1%));
+        width: 200px;
+        margin: auto;
+        margin-top: 20px;
+        grid-template-areas: "element1"
+        "element1"
+        "element2"
+        "element4"
+        "element5"
+        "element5"
+        "element3"
+        "element3";
+
+      }
+      .text{
+        font-size: 7px;
+      }
+      .profile::after{
+        font-size: 9px;
+      }
+      :root{
+        --ms:15px;
+        --lm:100%;
+    }
+}
